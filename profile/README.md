@@ -28,30 +28,3 @@ Ecosistema de aplicaciones web, SaaS y proyectos personales bajo [santiagogelvez
 ## 🛠️ Stack principal
 React · Next.js · Vue 3 · NestJS · FastAPI · Go · PostgreSQL · Redis · AWS · Cloudflare · Terraform
 ```
-
-### 2. Crear repo `infra`
-
-1. Creá un nuevo repo llamado **`infra`**
-2. Visibilidad: **Private**
-3. Inicializá con un README básico
-
-Luego subí el código Terraform que ya tenés (el módulo `s3-subdomain`). Estructura sugerida:
-```
-infra/
-├── modules/
-│   └── s3-subdomain/        ← el módulo que ya tenés
-├── envs/
-│   └── prod/
-│       ├── main.tf           ← donde invocás los módulos
-│       ├── variables.tf
-│       └── terraform.tfvars  ← en .gitignore (tiene el token de Cloudflare)
-├── .gitignore
-└── README.md
-```
-
-**Importante:** el `.gitignore` debe incluir:
-```
-*.tfvars
-*.tfstate
-*.tfstate.backup
-.terraform/
